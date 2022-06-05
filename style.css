@@ -102,14 +102,52 @@ header nav ul li a:hover {
   -webkit-transition: 0.5s;
   transition: 0.5s;
   z-index: -1000000;
+  border-left: 10px solid gray;
 }
 
 .side-bar-left-container ul {
-  padding-top: 60px;
+  position: absolute;
+  top: 80px;
+  left: 0;
+  width: 100%;
+}
+
+.side-bar-left-container ul li {
+  position: relative;
+  width: 100%;
+  list-style: none;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
 }
 
 .side-bar-left-container ul li a {
+  position: relative;
+  display: block;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   text-decoration: none;
+  color: #fff;
+}
+
+.side-bar-left-container ul li a .icon {
+  position: relative;
+  display: block;
+  min-width: 60px;
+  height: 60px;
+  line-height: 70px;
+  text-align: center;
+}
+
+.side-bar-left-container ul li a .title {
+  position: relative;
+  display: block;
+  padding: 0 10px;
+  height: 60px;
+  line-height: 60px;
+  text-align: start;
+  white-space: nowrap;
 }
 
 .side-bar-left-container.active {
@@ -128,29 +166,43 @@ main {
   z-index: -1000;
 }
 
-main section {
+main .container {
+  position: relative;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 2fr 500px;
+      grid-template-columns: 2fr 500px;
+  -webkit-transition: 2s;
+  transition: 2s;
   height: 100vh;
 }
 
-main section .container {
+main .container .right {
+  border-left: 1px solid #e5e5e5;
+  height: 100%;
+}
+
+main .container .right ul {
+  list-style: none;
+}
+
+main .container .right ul li {
+  padding: 20px;
+}
+
+main .container .right ul li a {
+  text-decoration: none;
+}
+
+main .container.active {
   position: relative;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 2fr .5fr;
-      grid-template-columns: 2fr .5fr;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  -ms-grid-columns: 2fr 300px;
+      grid-template-columns: 2fr 300px;
 }
 
-main section .container.active {
-  position: relative;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 2fr .2fr;
-      grid-template-columns: 2fr .2fr;
-}
-
-main footer {
+footer {
   width: 100%;
   height: 200px;
   background-color: #f5f5f5;
@@ -168,7 +220,7 @@ main footer {
   z-index: 10000;
 }
 
-main footer a {
+footer a {
   text-decoration: none;
   color: #000;
 }
