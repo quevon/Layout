@@ -128,12 +128,24 @@ main{
     transition: 0.5s;
     margin-top: 80px;
     z-index: -1000;
+
         .container{
             position: relative;
             display: grid;
             grid-template-columns: 2fr 500px;
             transition: 2s;
             height: 100vh;
+            .left{   
+                padding: 0 20px 0 20px;
+                h1{
+                    text-align: center;
+                    padding-bottom: 20px;
+                    font-size: 100px;
+                }
+                p{
+                    text-align: justify;
+                }
+            }
             .right{
                 border-left: 1px solid #e5e5e5;
                 height: 100%;

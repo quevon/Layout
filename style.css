@@ -181,6 +181,20 @@ main .container {
   height: 100vh;
 }
 
+main .container .left {
+  padding: 0 20px 0 20px;
+}
+
+main .container .left h1 {
+  text-align: center;
+  padding-bottom: 20px;
+  font-size: 100px;
+}
+
+main .container .left p {
+  text-align: justify;
+}
+
 main .container .right {
   border-left: 1px solid #e5e5e5;
   height: 100%;
