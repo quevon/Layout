@@ -51,6 +51,10 @@ header .toggle {
   cursor: pointer;
 }
 
+header .toggle .menu-bar {
+  z-index: 1000;
+}
+
 header nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -94,6 +98,8 @@ header nav ul li a:hover {
   width: 300px;
   background: gray;
   height: 100%;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .side-bar-left-container ul {
@@ -102,6 +108,10 @@ header nav ul li a:hover {
 
 .side-bar-left-container ul li a {
   text-decoration: none;
+}
+
+.side-bar-left-container.active {
+  width: 80px;
 }
 
 main {
@@ -120,6 +130,11 @@ main .container {
   display: grid;
   -ms-grid-columns: 2fr .7fr;
       grid-template-columns: 2fr .7fr;
+}
+
+main.active {
+  width: calc(100% - 80px);
+  left: 80px;
 }
 
 footer {

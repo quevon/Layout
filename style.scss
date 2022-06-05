@@ -34,6 +34,9 @@ header{
         align-items: center;
         font-size: 2.5em;
         cursor: pointer;
+        .menu-bar{
+            z-index: 1000;
+        }
     }
     nav{
         display: flex;
@@ -64,12 +67,16 @@ header{
     width: 300px;
     background: gray;
     height: 100%;
+    transition: 0.5s;
     ul{
         padding-top: 60px;
         li a{
             text-decoration: none;
         }
     }
+}
+.side-bar-left-container.active{
+    width: 80px;
 }
 main{
     position: absolute;
@@ -83,6 +90,10 @@ main{
         display: grid;
         grid-template-columns: 2fr .7fr;
     }
+}
+main.active{
+    width: calc(100% - 80px);
+    left: 80px;
 }
 footer{
     position: relative;
