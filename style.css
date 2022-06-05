@@ -150,6 +150,10 @@ header nav ul li a:hover {
   white-space: nowrap;
 }
 
+.side-bar-left-container ul li:hover {
+  border-left: 10px solid red;
+}
+
 .side-bar-left-container.active {
   width: 80px;
 }
